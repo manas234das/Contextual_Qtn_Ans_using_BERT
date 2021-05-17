@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}  
+    <article class="media content-section">
+        <div class="media-body">
+            <h4>Question: {{ question }}</h4>
+            <br>
+
+            {% for para in result_list %}
+                <article class="media">
+                    <div class="media-body">
+                        (o) PROBABILITY : {{ para[0]|safe }} <br>
+                        (o) {{ para[1]|safe }} <br><br><hr>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    </article>
+{% endblock content %}

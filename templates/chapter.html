@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+  <article class="media content-section">
+    <div class="media-body">
+      <h3 class="article-title">Questions in Chapter {{ chapter_num }}</h3>
+    </div>
+  </article>
+  
+  <article class="media content-section">
+      <div class="media-body">
+      {% for qtn in questions_list %}
+        <h6><a href="{{ url_for('question', qtn = qtn, chapter_num = chapter_num) }}">(o) {{ qtn }}</a></h6>
+      {% endfor %}
+      </div>
+  </article>
+
+  <form method="POST", action="{{ url_for('question', qtn = 'Extra_qtn', chapter_num = chapter_num) }}">
+    <fieldset class="form-group">
+      <legend class="border-bottom mb-6">Extra question</legend>
+      <input type="text" name="ext_qtn" class="form-control form-control-lg">
+      <br>
+    </fieldset>
+  </form>
+
+  <article class="media content-section">
+    <div class="media-body">
+      {% for para in para_head_list %}
+      <article class="media">
+        <div class="media-body">
+          <h5 class="article-title">{{ para.heading }}</h5>
+          <p class="article-content">{{ para.paragraph }}</p>
+          <hr>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </article>
+    
+{% endblock content %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+  {% for chapter in chapters_nn %}
+    <article class="media content-section">
+      <div class="media-body">
+        <h4><a href="{{ url_for('chapter', chapter_num = chapter.chapter_number) }}">Chapter :{{ chapter.chapter_number }}</a></h4>
+        <h6 class="article-content">{{ chapter.chapter_name }}</h6>
+      </div>
+    </article>
+  {% endfor %}
+{% endblock content %}

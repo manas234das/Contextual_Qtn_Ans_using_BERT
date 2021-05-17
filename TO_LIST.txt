@@ -1,0 +1,24 @@
+1. Cleaning of the formulae
+2. ncorporating the document tree into paragraph embeddings
+3. Hashing the paragraphs
+4. Colab with amine (docks) - 1. Either a latex or PDF
+5. Creating the list of abribations - Symbols, Full forms etc.....
+6. To create a larger corpus and find the answers from google.
+7. Explore natural question dataset.
+
+2,3,5
+Extra Text Box In the UI
+By EOD 2md Sep
+
+Must be included in Demo
+
+7 -> Reccomend
+Explore
+
+Show results in ipynb. 
+
+Starting 9th
+Documenntation (Prateek and Manas)
+
+
+ 
